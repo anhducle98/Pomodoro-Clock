@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Pomodoro Clock
+	</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<style type="text/css">
+		.center {
+			margin: auto;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		#main {
+			display: block;
+			width: 500px;
+			height: 300px;
+			background-color: #ADFF2F;
+		}
+
+		#start_button {
+			width: 100px;
+			height: 60px;
+			font-family: sans-serif;
+			font-size: 30px;
+			color: red;
+		}
+/*
+		span {
+			position: relative;
+		}
+
+		span:after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+		}
+*/
+		input {
+			font-family: sans-serif;
+			font-size: 18px;
+			text-align: center;
+		}
+	</style>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#start_button").click(function() {
+				
+			});
+		});
+	</script>
+</head>
+<body style="background-color: gold">
+	<div class="page-header center">
+		<h1>Pomodoro Clock</h1>
+	</div>
+	<div class="container center" id="main">
+		<div class="row">
+			<div class="col-xs-6">
+				<label for="break_input">
+					BREAK LENGTH
+				</label>
+				<span>
+					<input type="number" id="break_input" value="5" min="1" class="form-control">
+				</span>
+			</div>
+			<div class="col-xs-6">
+				<label for="session_input">
+					SESSION LENGTH
+				</label>
+				<span>
+					<input type="number" id="session_input" value="25" min="1" class="form-control">
+				</span>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="progress">
+					<div class="progress-bar	 progress-bar-striped active" role=progressbar style="width: 100%" onkeydown="return false" onkeypress="return false" onkeyup="return false">
+						<span class="sr-only">
+							10:30
+						</span>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-12">
+				<button class="btn btn-default" id="start_button">
+					Start
+				</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
